@@ -9,7 +9,7 @@ add_library(geometryhpp INTERFACE)
 target_include_directories(geometryhpp
   INTERFACE
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include/geometryhpp>
+  $<INSTALL_INTERFACE:include>
 )
 
 include(CMakePackageConfigHelpers)
@@ -28,7 +28,7 @@ install(TARGETS geometryhpp
 
 install(DIRECTORY
   "${CMAKE_CURRENT_SOURCE_DIR}/include/mapbox"
-  DESTINATION include/geometryhpp
+  DESTINATION include
 )
 
 install(
